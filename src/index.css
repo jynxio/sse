@@ -1,0 +1,8 @@
+html,
+body {
+	background-color: #09090b;
+}
+
+#root {
+	isolation: isolate;
+}

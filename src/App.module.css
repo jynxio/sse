@@ -1,0 +1,52 @@
+.wrapper {
+	position: fixed;
+	inset: 0;
+	margin: auto;
+	aspect-ratio: 1.618 / 1;
+	inline-size: 100%;
+	max-inline-size: 980px;
+}
+
+.header {
+	color: #fafafa;
+	font-size: 2rem;
+	text-align: center;
+}
+
+.echarts {
+	padding-inline: 10px;
+	block-size: 100%;
+	inline-size: 100%;
+}
+
+.toaster {
+	& li {
+		border: 1px solid #27272a !important;
+		background-color: #09090b !important;
+	}
+
+	& * {
+		color: #fefefe !important;
+		white-space: pre-line !important;
+	}
+}
+
+.joker {
+	position: absolute;
+	inset: 0;
+	aspect-ratio: 1 / 1;
+	inline-size: 30%;
+	margin: auto;
+	pointer-events: none;
+	transition: all ease 300ms;
+
+	&.visible {
+		opacity: 1;
+		scale: 1;
+	}
+
+	&.invisible {
+		opacity: 0;
+		scale: 0.65;
+	}
+}

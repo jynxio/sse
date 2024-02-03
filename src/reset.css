@@ -1,0 +1,61 @@
+* {
+	margin: 0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html,
+body {
+	min-block-size: 100vh;
+	min-block-size: 100dvh;
+}
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+body {
+	line-height: 1.5;
+	/* stylelint-disable-next-line value-keyword-case */
+	text-rendering: optimizeSpeed;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+p {
+	hyphens: auto;
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
