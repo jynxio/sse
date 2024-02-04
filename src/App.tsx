@@ -46,6 +46,9 @@ function createChart(dom: HTMLElement, setVisible: React.Dispatch<React.SetState
 	const chart = echarts.init(dom, undefined, { devicePixelRatio });
 	const option = {
 		backgroundColor: color.black,
+		grid: {
+			left: '13%',
+		},
 		xAxis: {
 			type: 'category',
 			boundaryGap: false,
@@ -65,7 +68,7 @@ function createChart(dom: HTMLElement, setVisible: React.Dispatch<React.SetState
 				show: true,
 				lineStyle: { color: color.gray },
 			},
-			axisLabel: { textStyle: { color: color.white, fontFamily } },
+			axisLabel: { color: color.white, fontFamily },
 			axisPointer: { snap: false },
 			splitLine: { show: false },
 		},
@@ -107,7 +110,6 @@ function createChart(dom: HTMLElement, setVisible: React.Dispatch<React.SetState
 				lineStyle: { width: 1, color: color.red },
 				areaStyle: {
 					origin: 'end',
-					// FIXME:
 					color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
 						{ offset: 0, color: '#eb483e' },
 						{ offset: 0.75, color: '#eb483e00' },
