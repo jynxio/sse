@@ -120,7 +120,7 @@ function createChart(dom: HTMLElement, setVisible: React.Dispatch<React.SetState
 			{
 				z: 100,
 				type: 'scatter',
-				symbolSize: 8,
+				symbolSize: document.documentElement.clientWidth < 550 ? 4 : 6,
 				itemStyle: { color: color.red, shadowColor: color.black, shadowBlur: 4 },
 				data: scatterData.map(item => [item.date, item.low]),
 				animationDuration: 1,
