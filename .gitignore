@@ -28,3 +28,5 @@ package-lock.json
 .DS_Store
 .AppleDouble
 .LSOverride
+
+crawl-line-data.json
