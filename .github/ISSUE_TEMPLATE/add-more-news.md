@@ -1,7 +1,7 @@
 ---
 name: Add more news
 about: You will describe the news you want to add here
-title: "[news] add more news"
+title: 'news: add more news'
 labels: news
 assignees: jynxio
 
