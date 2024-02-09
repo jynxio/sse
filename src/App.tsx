@@ -1,5 +1,5 @@
 import style from './App.module.css';
-import lineData from '@/assets/line-data.json';
+import lineData from '@/assets/crawl-line-data.json';
 import scatterData from '@/assets/scatter-data.json';
 import jokerImgUrl from '@/assets/joker.gif?url';
 import * as echarts from 'echarts';

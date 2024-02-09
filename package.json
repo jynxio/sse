@@ -6,16 +6,18 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
+		"crawl": "node crawl/stock.mjs",
 		"preview": "vite preview",
 		"lint:js": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix",
 		"lint:css": "stylelint \"**/*.{css,scss,sass,less,postcss}\" --fix",
 		"lint:style": "prettier --write .",
 		"lint:all": "npm run lint:js && npm run lint:css && npm run lint:style",
-		"prepare": "husky",
+		"prepare": "husky && npm run crawl",
 		"lintstaged": "lint-staged",
 		"commitlint": "commitlint --edit"
 	},
 	"dependencies": {
+		"axios": "^1.6.7",
 		"canvas-confetti": "^1.9.2",
 		"echarts": "^5.4.3",
 		"next-themes": "^0.2.1",
