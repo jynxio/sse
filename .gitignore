@@ -29,4 +29,5 @@ package-lock.json
 .AppleDouble
 .LSOverride
 
-crawl-line-data.json
+# Temporary data
+**/assets/stats-data.json

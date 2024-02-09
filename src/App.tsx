@@ -1,12 +1,14 @@
 import style from './App.module.css';
-import lineData from '@/assets/crawl-line-data.json';
-import scatterData from '@/assets/scatter-data.json';
+import statsData from '@/assets/stats-data.json';
 import jokerImgUrl from '@/assets/joker.gif?url';
 import * as echarts from 'echarts';
 import { useEffect, useRef, useState } from 'react';
 import { Toaster } from '@/components';
 import { toast } from 'sonner';
 import { createStars, createFireworks, createCustomShapes } from './utils';
+
+const lineData = statsData;
+const scatterData = statsData.filter(item => item.news);
 
 function App() {
 	const dom = useRef<HTMLDivElement>(null);
@@ -95,9 +97,9 @@ function createChart(dom: HTMLElement, setVisible: React.Dispatch<React.SetState
 
 				if (type === 'line') return '';
 
-				const msg = scatterData[index].msg;
+				const news = scatterData[index].news;
 
-				return Array.isArray(msg) ? msg.join('<br />') : msg;
+				return Array.isArray(news) ? news.join('<br />') : news;
 			},
 		},
 		series: [
@@ -120,7 +122,7 @@ function createChart(dom: HTMLElement, setVisible: React.Dispatch<React.SetState
 			{
 				z: 100,
 				type: 'scatter',
-				symbolSize: document.documentElement.clientWidth < 550 ? 4 : 6,
+				symbolSize: document.documentElement.clientWidth < 550 ? 3 : 5,
 				itemStyle: { color: color.red, shadowColor: color.black, shadowBlur: 4 },
 				data: scatterData.map(item => [item.date, item.low]),
 				animationDuration: 1,
@@ -129,9 +131,9 @@ function createChart(dom: HTMLElement, setVisible: React.Dispatch<React.SetState
 					const date = item.date;
 					const count = lineData.findIndex(item => item.date === date);
 					const delay = (count * animationDuration) / (lineData.length - 1);
-					const msg = Array.isArray(item.msg) ? item.msg.join('\n') : item.msg;
+					const news = Array.isArray(item.news) ? item.news.join('\n') : item.news;
 
-					setTimeout(() => toast(msg), delay);
+					setTimeout(() => toast(news), delay);
 
 					return delay;
 				},
