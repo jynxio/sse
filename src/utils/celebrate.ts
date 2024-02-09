@@ -82,7 +82,7 @@ export function createFireworks() {
 		return Math.random() * (max - min) + min;
 	}
 
-	const interval = setInterval(function () {
+	const interval: Timer = setInterval(function () {
 		const timeLeft = animationEnd - Date.now();
 
 		if (timeLeft <= 0) {
