@@ -3,9 +3,10 @@ import statsData from '@/assets/stats-data.json';
 import jokerImgUrl from '@/assets/joker.gif?url';
 import * as echarts from 'echarts';
 import { useEffect, useRef, useState } from 'react';
-import { Toaster } from '@/components';
+import { Toaster, Address } from '@/components';
 import { toast } from 'sonner';
 import { createStars, createFireworks, createCustomShapes } from './utils';
+import { createPortal } from 'react-dom';
 
 const lineData = statsData;
 const scatterData = statsData.filter(item => item.news);
@@ -30,6 +31,7 @@ function App() {
 			<section className={[style.joker, visible ? style.visible : style.invisible].join(' ')}>
 				<img src={jokerImgUrl} />
 			</section>
+			{createPortal(<Address />, document.body)}
 		</div>
 	);
 }

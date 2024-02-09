@@ -3,6 +3,19 @@ body {
 	background-color: #09090b;
 }
 
+body {
+	color: #fefefe;
+	font-family: monospace, sans-serif, system-ui;
+	font-size: calc(14 / 16 * 1rem);
+	font-style: normal;
+	font-weight: 400;
+
+	& * {
+		color: inherit;
+		font: inherit;
+	}
+}
+
 #root {
 	isolation: isolate;
 }
