@@ -7,6 +7,10 @@ assignees: jynxio
 
 ---
 
+## Description
+
+Apply to add the following news:
+
 - Slogan for the 1st news | Reference link, Reference link, ...
 - Slogan for the 2nd news | Reference link, Reference link, ...
 - Slogan for the 3rd news | Reference link, Reference link, ...
