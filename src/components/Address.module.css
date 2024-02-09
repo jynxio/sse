@@ -1,0 +1,26 @@
+.wrapper {
+	position: fixed;
+	display: flex;
+	gap: 0.35rem;
+	inset: auto 0 10px;
+	inline-size: fit-content;
+	margin-inline: auto;
+	cursor: default;
+
+	@media (width <= 550px) {
+		justify-content: center;
+		inset: 3.5rem 3.5rem auto auto;
+		inline-size: 100%;
+		border: 1px solid #27272a;
+		translate: 50% -50%;
+		rotate: 45deg;
+
+		> :last-child {
+			padding-block: 0.3rem;
+		}
+
+		> :not(:last-child) {
+			display: none;
+		}
+	}
+}
