@@ -7,9 +7,6 @@ on:
     pull_request:
         branches:
             - main
-    schedule:
-        # redeploy every day at 6 am to crawl new stock data
-        - cron: '0 6 * * *'
 
 jobs:
     build-and-deploy:
